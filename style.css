@@ -189,7 +189,7 @@ button {
   letter-spacing: -0.02em;
 }
 .section__head .muted {
-  color: #666;
+  color: #000000;
   font-family: "Milligram Light", sans-serif;
   font-size: 32px;
 }
@@ -271,11 +271,15 @@ button {
 .card button:active { background: #ff2d2d; }
 
 .mix-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  align-items: stretch;
 }
+.mix-card {
+  flex: 1 1 calc(33.333% - 20px);
+}
+
 .mix-card {
   border-radius: 8px;
   border: 3px solid transparent;
