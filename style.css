@@ -233,7 +233,7 @@ button {
   background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15));
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: 100% 80%;
+  background-size: 100% 75%;
 }
 .cards-3 .card:hover {
   background-size: 100% 110%;
@@ -278,18 +278,11 @@ button {
 }
 .mix-card {
   flex: 1 1 calc(33.333% - 20px);
-}
-
-.mix-card {
   border-radius: 8px;
   border: 3px solid transparent;
   overflow: hidden;
   transition: border-color 0.3s ease, transform 0.3s ease;
   aspect-ratio: 4 / 5;
-}
-.mix-card--tall {
-  grid-row: span 2;
-  aspect-ratio: auto;
 }
 .mix-card img {
   width: 100%;
@@ -298,7 +291,6 @@ button {
 }
 .mix-card:hover { border-color: #ff2d2d; transform: translateY(-4px); }
 .mix-card:active { border-color: #ff0000; }
-
 
 .feedback-4 {
   display: grid;
@@ -389,13 +381,13 @@ button {
 
 @media (max-width: 1024px) {
   .cards-3 .card { flex: 1 1 calc(50% - 24px); }
-  .mix-grid { grid-template-columns: repeat(2, 1fr); }
+  .mix-grid .mix-card { flex: 1 1 calc(50% - 20px); }
   .feedback-4 { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
   .cards-3 .card { flex: 1 1 100%; }
-  .mix-grid { grid-template-columns: 1fr; }
-  .mix-card--tall { grid-row: span 1; aspect-ratio: 4/5; }
+  .mix-grid .mix-card { flex: 1 1 100%; } 
   .feedback-4 { grid-template-columns: 1fr; }
 }
 
@@ -404,7 +396,7 @@ button {
   justify-content: space-between;
   align-items: center; 
   width: 100%;
-  flex-wrap: nowrap; /* ноу перенос */
+  flex-wrap: nowrap;
 }
 
 .section__head-main h2 {
