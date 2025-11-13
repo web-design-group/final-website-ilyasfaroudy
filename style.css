@@ -1,0 +1,504 @@
+/* ---------------- СБРОС ---------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Milligram", sans-serif;
+  color: #111;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: "Milligram Light", sans-serif;
+}
+
+.wrap,
+.section__inner,
+.header__inner,
+.footer__inner {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header {
+  width: 100%;
+  height: 72px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.header__inner {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__img {
+  height: 127px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 95px;
+}
+
+.nav a {
+  font-family: "Milligram Light", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.nav a:hover { text-decoration: underline; }
+.nav a:active { color: #ff2d2d; }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+/* корзина с тремя состояниями (иконка + текст) */
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-family: "Milligram Light", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.cart::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("img/bagD.png") center/contain no-repeat;
+  transition: background-image 0.2s ease;
+}
+
+/* hover — подчёркивание + замена иконки */
+.cart:hover {
+  text-decoration: underline;
+}
+.cart:hover::after {
+  background-image: url("img/bagH.png");
+}
+
+/* active — красный текст и другая иконка */
+.cart:active {
+  color: #ff2d2d;
+  text-decoration: none;
+}
+.cart:active::after {
+  background-image: url("img/bagA.png");
+}
+
+
+.btn--redSpecial {
+  background: #ff2d2d;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Milligram Light", sans-serif;
+  border-radius: 12px;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.btn--redSpecial:hover {
+  background: #ff2d2d;
+  text-decoration: underline;
+}
+
+.btn--redSpecial:active {
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+
+
+.btn {
+  padding: 20px 28px;
+  font-size: 20px;
+  font-family: "Milligram Light", sans-serif;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.btn:hover { text-decoration: underline; }
+.btn:active { background: #ff2d2d; }
+
+
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-top: 72px;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("img/bg_main1.JPG") center/cover no-repeat;
+}
+
+.hero__content {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero__title {
+  font-family: "Milligram Bold", sans-serif;
+  font-size: 64px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  margin: 20px 0 40px;
+  font-family: "Milligram Light", sans-serif;
+  font-size: 32px;
+  color: #ddd;
+}
+
+.hero__left .btn--redSpecial {
+  margin-top: 0;
+}
+
+.hero__image {
+  max-width: 600px;
+  height: auto;
+}
+
+
+
+.section {
+  position: relative;
+  padding: 120px 0;
+  color: #000;
+}
+
+.section--dark {
+  background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)),
+              url("img/bg_main2.JPG") center/cover no-repeat;
+}
+
+.section--white { background: #fff; }
+
+.section--wishlist {
+  background: linear-gradient(rgba(255,255,255,0.0), rgba(255,255,255,0.0)),
+              url("img/bg_main2_OP.JPG") center/cover no-repeat;
+}
+
+.section__inner {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.section__head h2 {
+  font-family: "Milligram Bold", sans-serif;
+  font-size: 64px;
+  line-height: 60px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section__head .muted {
+  color: #000000;
+  font-family: "Milligram Light", sans-serif;
+  font-size: 32px;
+}
+
+
+
+.section__head--withAction {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section__head-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.section__head-main h2 {
+  margin: 0;
+  text-align: left;
+}
+
+.section__head-main a {
+  margin-left: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+
+
+.cards-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.cards-3 .card {
+  flex: 1 1 calc(33.333% - 24px);
+  min-width: 260px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.2s ease, background-size 0.35s ease;
+  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15));
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 75%;
+}
+
+.cards-3 .card:hover {
+  background-size: 100% 110%;
+}
+
+.cards-3 .card:active {
+  background-image: linear-gradient(rgba(255,45,45,0.15), rgba(255,45,45,0.15));
+  background-size: 100% 110%;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 16px;
+}
+
+.card__title {
+  font-family: "Milligram Light", sans-serif;
+  font-size: 28px;
+  color: #000;
+  margin: 8px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.card button {
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 14px 28px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card button:hover { text-decoration: underline; }
+.card button:active { background: #ff2d2d; }
+
+
+.mix-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mix-card {
+  flex: 1 1 calc(33.333% - 20px);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  aspect-ratio: 4 / 5;
+}
+
+.mix-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mix-card:hover { border-color: #ff2d2d; transform: translateY(-4px); }
+.mix-card:active { border-color: #ff0000; }
+
+
+
+.feedback-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feedback-4 .fb-card {
+  border-radius: 8px;
+  border: 3px solid transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.feedback-4 .fb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: inherit;
+}
+
+.feedback-4 .fb-card:hover {
+  border-color: #ff2d2d;
+  transform: scale(1.01);
+}
+
+.mix-note,
+.wish-note,
+.feedback-note {
+  font-family: "Milligram Light", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: #000;
+  margin-top: 40px;
+  line-height: 1.4;
+}
+
+
+
+.footer {
+  width: 100%;
+  height: 72px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Milligram Light", sans-serif;
+  font-size: 16px;
+}
+
+.footer__inner {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.1;
+}
+
+.footer__left i { color: #ff2d2d; font-size: 18px; }
+
+.footer__left p { display: flex; flex-direction: column; color: #fff; }
+
+.footer__left p span { transition: color 0.3s ease, text-decoration 0.3s ease; }
+
+.footer__left p:hover span { text-decoration: underline; }
+
+.footer__left p:active span { color: #ff2d2d; }
+
+.footer__center {
+  font-family: "Milligram Light", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer__center:hover { text-decoration: underline; }
+
+.footer__center:active { color: #ff2d2d; }
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.footer__right span { transition: color 0.3s ease, text-decoration 0.3s ease; }
+
+.footer__right span:hover { text-decoration: underline; }
+
+.footer__right span:active { color: #ff2d2d; }
+
+
+
+@media (max-width: 1024px) {
+  .cards-3 .card { flex: 1 1 calc(50% - 24px); }
+  .mix-grid .mix-card { flex: 1 1 calc(50% - 20px); }
+  .feedback-4 .fb-card { flex: 1 1 calc(50% - 24px); }
+}
+
+@media (max-width: 768px) {
+  .cards-3 .card,
+  .mix-grid .mix-card,
+  .feedback-4 .fb-card {
+    flex: 1 1 100%;
+  }
+}
