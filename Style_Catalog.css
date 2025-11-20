@@ -140,14 +140,44 @@ a {
 }
 
 .hero__back {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+
   font-family: "Milligram Light", sans-serif;
-  font-size: 20px;
+  font-size: 32px;
   color: #000;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+
+  cursor: pointer;
+  transition: color 0.25s ease, text-decoration 0.25s ease;
 }
 
-.hero__back:hover { text-decoration: underline; }
-.hero__back:active { color: #ff2d2d; text-decoration: none; }
+.hero__back::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: url("img/backD.png") center/contain no-repeat;
+  transition: background-image 0.25s ease;
+}
+
+
+.hero__back:hover {
+  text-decoration: underline;
+}
+.hero__back:hover::before {
+  background-image: url("img/backH.png");
+}
+
+
+.hero__back:active {
+  color: #ff2d2d;
+  text-decoration: none;
+}
+.hero__back:active::before {
+  background-image: url("img/backA.png");
+}
+
 
 .hero__title {
   font-family: "Milligram Bold", sans-serif;
