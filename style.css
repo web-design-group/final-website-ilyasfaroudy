@@ -408,7 +408,7 @@ button {
 
 .feedback-4 .fb-card:hover {
   border-color: #ff2d2d;
-  transform: scale(1.01);
+  transform: scale(1.0);
 }
 
 .mix-note,

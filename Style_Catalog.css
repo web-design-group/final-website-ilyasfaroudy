@@ -222,7 +222,7 @@ a {
 
 .catalog-card__imgBox:hover {
   border-color: #ff2d2d;
-  transform: translateY(-6px);
+  transform: translateY(0px);
 }
 
 .catalog-card__imgBox:active {
