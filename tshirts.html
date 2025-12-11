@@ -1,24 +1,16 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Футболки</title>
 
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-
-  <link rel="stylesheet" href="Style_Tshirt.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Style_Tshirt.css">
 </head>
 <body>
 
-
 <div class="bg-full"></div>
-
 
 <header class="header">
   <div class="container d-flex justify-content-between align-items-center">
@@ -41,18 +33,24 @@
   </div>
 </header>
 
-
-
-
 <div class="container filter-row d-flex align-items-center justify-content-between">
-  
-  <a href="catalog.html" class="hero__back">Назад</a>
+
+
+  <a href="catalog.html" class="hero__back">
+      <span class="back-icons">
+        <img src="img/BackDW.png" class="back-icon back-default" alt="Назад">
+        <img src="img/BackHW.png" class="back-icon back-hover" alt="">
+        <img src="img/BackA.png"  class="back-icon back-active" alt="">
+      </span>
+      Назад
+  </a>
 
   <h1 class="hero__title m-0 text-center flex-grow-1">Футболки</h1>
 
   <div class="dropdown-block">
       <button id="filterToggle" class="filter-btn">
-          Стиль <img src="img/DropArrow.png" class="filter-arrow">
+        Стиль
+        <img src="img/DropArrow.png" class="filter-arrow" alt="drop arrow">
       </button>
 
       <ul id="filterMenu" class="filter-menu">
@@ -60,25 +58,32 @@
           <li>Casual</li>
           <li>Oversize</li>
           <li>Minimal</li>
-          <li>Classic</li>
+          <li data-reset="true">Clear all</li>
       </ul>
   </div>
-
 </div>
 
-
 <div class="container cards-container">
-
   <div class="row g-5">
 
     <div class="col-md-6">
-      <div class="tshirt-card">
+      <div class="tshirt-card" data-style="Street">
         <div class="icons">
-          <img src="img/ButMatchD.png" class="icon">
-          <img src="img/linkButD.png" class="icon">
+
+          <span class="icon-group match-group">
+            <img src="img/ButMatchD.png" class="icon match-default" alt="match icon">
+            <img src="img/ButMatchH.png" class="icon match-hover"  alt="">
+            <img src="img/ButMatchA.png" class="icon match-active" alt="">
+          </span>
+
+          <span class="icon-group link-group">
+            <img src="img/linkButD.png" class="icon link-default" alt="link icon">
+            <img src="img/linkButH.png" class="icon link-hover"  alt="">
+            <img src="img/linkButA.png" class="icon link-active" alt="">
+          </span>
         </div>
 
-        <img src="img/tee1.png" class="tshirt-img">
+        <img src="img/tee1.png" class="tshirt-img" alt="футболка Paris White">
 
         <div class="card-content">
           <p class="tshirt-title text-center">Футболка Paris White</p>
@@ -88,13 +93,22 @@
     </div>
 
     <div class="col-md-6">
-      <div class="tshirt-card tshirt-card-wrapper--shift">
+      <div class="tshirt-card tshirt-card-wrapper--shift" data-style="Casual">
         <div class="icons">
-          <img src="img/ButMatchD.png" class="icon">
-          <img src="img/linkButD.png" class="icon">
+          <span class="icon-group match-group">
+            <img src="img/ButMatchD.png" class="icon match-default" alt="match icon">
+            <img src="img/ButMatchH.png" class="icon match-hover"  alt="">
+            <img src="img/ButMatchA.png" class="icon match-active" alt="">
+          </span>
+
+          <span class="icon-group link-group">
+            <img src="img/linkButD.png" class="icon link-default" alt="link icon">
+            <img src="img/linkButH.png" class="icon link-hover"  alt="">
+            <img src="img/linkButA.png" class="icon link-active" alt="">
+          </span>
         </div>
 
-        <img src="img/teeGray.png" class="tshirt-img">
+        <img src="img/teeGray.png" class="tshirt-img" alt="футболка Paris Grey">
 
         <div class="card-content">
           <p class="tshirt-title text-center">Футболка Paris Grey</p>
@@ -104,13 +118,22 @@
     </div>
 
     <div class="col-md-6">
-      <div class="tshirt-card">
+      <div class="tshirt-card" data-style="Oversize">
         <div class="icons">
-          <img src="img/ButMatchD.png" class="icon">
-          <img src="img/linkButD.png" class="icon">
+          <span class="icon-group match-group">
+            <img src="img/ButMatchD.png" class="icon match-default" alt="match icon">
+            <img src="img/ButMatchH.png" class="icon match-hover"  alt="">
+            <img src="img/ButMatchA.png" class="icon match-active" alt="">
+          </span>
+
+          <span class="icon-group link-group">
+            <img src="img/linkButD.png" class="icon link-default" alt="link icon">
+            <img src="img/linkButH.png" class="icon link-hover"  alt="">
+            <img src="img/linkButA.png" class="icon link-active" alt="">
+          </span>
         </div>
 
-        <img src="img/teeRed.png" class="tshirt-img">
+        <img src="img/teeRed.png" class="tshirt-img" alt="футболка Paris Red">
 
         <div class="card-content">
           <p class="tshirt-title text-center">Футболка Paris Red</p>
@@ -119,15 +142,23 @@
       </div>
     </div>
 
-
     <div class="col-md-6">
-      <div class="tshirt-card tshirt-card-wrapper--shift">
+      <div class="tshirt-card tshirt-card-wrapper--shift" data-style="Minimal">
         <div class="icons">
-          <img src="img/ButMatchD.png" class="icon">
-          <img src="img/linkButD.png" class="icon">
+          <span class="icon-group match-group">
+            <img src="img/ButMatchD.png" class="icon match-default" alt="match icon">
+            <img src="img/ButMatchH.png" class="icon match-hover"  alt="">
+            <img src="img/ButMatchA.png" class="icon match-active" alt="">
+          </span>
+
+          <span class="icon-group link-group">
+            <img src="img/linkButD.png" class="icon link-default" alt="link icon">
+            <img src="img/linkButH.png" class="icon link-hover"  alt="">
+            <img src="img/linkButA.png" class="icon link-active" alt="">
+          </span>
         </div>
 
-        <img src="img/tee2.PNG" class="tshirt-img">
+        <img src="img/tee2.PNG" class="tshirt-img" alt="футболка Paris Black">
 
         <div class="card-content">
           <p class="tshirt-title text-center">Футболка Paris Black</p>
@@ -139,23 +170,22 @@
   </div>
 </div>
 
+<div class="return-home">
+  <a href="index.html">Вернуться на главную</a>
+</div>
+
 <footer class="footer">
   <div class="container footer-grid">
-
     <div class="footer-left">
       <p><span>Политика</span><span>конфиденциальности</span></p>
     </div>
-    
     <div class="footer-center">Секрет</div>
-
     <div class="footer-right">
       <span>+7-123-123-**-**</span>
       <span>SekretClo****@mail.ru</span>
     </div>
-
   </div>
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -169,8 +199,26 @@ btn.onclick = () => {
 };
 </script>
 
+<script>
+document.querySelectorAll(".filter-menu li").forEach(item => {
+    item.addEventListener("click", () => {
 
+        if (item.dataset.reset === "true") {
+            document.querySelectorAll(".tshirt-card")
+                    .forEach(card => card.style.display = "block");
+            menu.style.display = "none";
+            return;
+        }
 
+        const style = item.textContent.trim();
+        document.querySelectorAll(".tshirt-card").forEach(card => {
+            card.style.display = card.dataset.style === style ? "block" : "none";
+        });
+
+        menu.style.display = "none";
+    });
+});
+</script>
 
 </body>
 </html>
