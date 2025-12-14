@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Milligram Light", sans-serif;
+  font-family: "Milligram Light", sans-serif !important;
   color: white;
   background: black;
   overflow-x: hidden;
