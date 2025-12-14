@@ -397,15 +397,3 @@ body {
 .filter-menu li:hover {
   background: rgba(255,255,255,0.10);
 }
-
-body,
-button,
-input,
-select,
-textarea,
-.btn,
-.container,
-.row,
-[class*="col-"] {
-  font-family: "Milligram", sans-serif;
-}
