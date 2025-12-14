@@ -35,7 +35,7 @@ body {
 .nav-menu a {
   color: white;
   text-decoration: none;
-  font-family: "Milligram Light" !important;
+  font-family: "Milligram Light", sans-serif !important;
   transition: 0.25s;
 }
 
@@ -99,7 +99,7 @@ body {
   background: #ff2d2d;
   color: white;
   padding: 10px 25px;
-  font-family: "Milligram Light" !important;
+  font-family: "Milligram Light", sans-serif !important;
   border-radius: 12px;
   transition: 0.25s;
 }
@@ -112,7 +112,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Milligram Light" !important;
+  font-family: "Milligram Light", sans-serif !important;
   font-size: 32px;
   color: white;
   cursor: pointer;
@@ -265,7 +265,7 @@ body {
 
 .tshirt-title {
   font-size: 26px;
-  font-family: "Milligram Light" !important;
+  font-family: "Milligram Light", sans-serif !important;
   margin-bottom: 12px;
 }
 
@@ -274,7 +274,7 @@ body {
   color: white;
   padding: 10px 26px;
   border-radius: 12px;
-  font-family: "Milligram Light" !important;
+  font-family: "Milligram Light", sans-serif !important;
   transition: 0.25s;
 }
 
@@ -299,7 +299,7 @@ body {
 .return-home a {
   color: white;
   text-decoration: none;
-  font-family: "Milligram Light";
+  font-family: "Milligram Light", sans-serif;
   font-size: 22px;
   transition: 0.25s;
 }
@@ -323,7 +323,7 @@ body {
 .footer-left span,
 .footer-right span {
   display: block;
-  font-family: "Milligram Light";
+  font-family: "Milligram Light", sans-serif;
 }
 
 .filter-row {
@@ -388,7 +388,7 @@ body {
 .filter-menu li {
   padding: 9px 14px;
   font-size: 20px;
-  font-family: "Milligram Light" !important;
+  font-family: "Milligram Light", sans-serif !important;
   color: white;
   cursor: pointer;
   transition: .25s;
