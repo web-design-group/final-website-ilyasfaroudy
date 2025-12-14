@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Sekret — Каталог</title>
-  <link rel="stylesheet" href="Style_Catalog.css">
+  <link rel="stylesheet" href="styles/Style_Catalog.css">
 </head>
 <body>
 
@@ -23,6 +23,11 @@
     <div class="nav-right">
       <div class="cart">
         <span class="cart__title">Корзина</span>
+        <span class="cart-icons" aria-hidden="true">
+          <img src="img/bagD.png" class="cart-icon cart-default" alt="Корзина">
+          <img src="img/bagH.png" class="cart-icon cart-hover" alt="Корзина">
+          <img src="img/BagA.png" class="cart-icon cart-active" alt="Корзина">
+        </span>
       </div>
       <button class="btn--redSpecial">Профиль</button>
     </div>
@@ -33,13 +38,18 @@
   <div class="hero__grid">
     <h1 class="hero__title">Каталог</h1>
     <a href="index.html" class="hero__back">
+      <span class="back-icons" aria-hidden="true">
+        <img src="img/BackD.PNG" class="back-icon back-default" alt="Назад">
+        <img src="img/BackH.PNG" class="back-icon back-hover" alt="Назад">
+        <img src="img/BackA.PNG" class="back-icon back-active" alt="Назад">
+      </span>
       <span class="hero__backText">Назад</span>
     </a>
   </div>
 </section>
 
 <section class="catalog-section">
-  <h2 style="display:none">Каталог товаров</h2> 
+  <h2 style="display:none">Каталог товаров</h2>
 
   <div class="catalog-grid">
 
@@ -92,7 +102,7 @@
         <p class="catalog-card__title">Куртки</p>
       </article>
     </a>
-    
+
     <a href="tshirts.html" class="catalog-link">
       <article class="catalog-card">
         <h3 style="display:none">Аксессуары</h3>

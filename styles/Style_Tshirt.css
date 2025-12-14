@@ -14,7 +14,7 @@ body {
 .bg-full {
   position: fixed;
   inset: 0;
-  background: url("img/bg_main1.JPG") center/cover no-repeat;
+  background: url("../img/bg_main1.JPG") center/cover no-repeat;
   z-index: -1;
 }
 
@@ -43,6 +43,7 @@ body {
   text-decoration: underline;
 }
 
+
 .cart {
   display: flex;
   align-items: center;
@@ -51,21 +52,48 @@ body {
   transition: 0.2s;
 }
 
-.cart::after {
-  content: "";
+.cart:hover span {
+  text-decoration: underline;
+}
+
+.cart:active span {
+  color: #ff2d2d;
+  text-decoration: none;
+}
+
+
+.cart__icon {
   width: 34px;
   height: 34px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  display: block;
 }
 
-.cart:hover::after {
-  background-image: url("img/bagH.png");   /* фон – допустимо */
+.cart__icon--default {
+  display: block;
 }
 
-.cart:active::after {
-  background-image: url("img/bagA.png");   /* фон – допустимо */
+.cart__icon--hover,
+.cart__icon--active {
+  display: none;
 }
+
+.cart:hover .cart__icon--default {
+  display: none;
+}
+
+.cart:hover .cart__icon--hover {
+  display: block;
+}
+
+.cart:active .cart__icon--hover {
+  display: none;
+}
+
+.cart:active .cart__icon--active {
+  display: block;
+}
+
+
 
 .btn-red {
   background: #ff2d2d;
@@ -79,7 +107,6 @@ body {
 .btn-red:hover {
   text-decoration: underline;
 }
-
 
 .hero__back {
   display: inline-flex;
@@ -101,41 +128,40 @@ body {
 }
 
 .back-icon {
-  position: absolute;
+  position: relative;  /* ? */
   inset: 0;
   width: 32px;
   height: 32px;
 }
 
-
 .back-default {
   display: block;
 }
+
 .back-hover,
 .back-active {
   display: none;
 }
 
-
 .hero__back:hover .back-default {
   display: none;
 }
+
 .hero__back:hover .back-hover {
   display: block;
 }
 
-
 .hero__back:active {
   color: #ff2d2d;
 }
+
 .hero__back:active .back-hover {
   display: none;
 }
+
 .hero__back:active .back-active {
   display: block;
 }
-
-
 
 .hero__title {
   font-family: "Milligram Bold", sans-serif;
@@ -177,7 +203,6 @@ body {
   z-index: 10;
 }
 
-
 .icon-group {
   position: relative;
   width: 34px;
@@ -194,11 +219,11 @@ body {
   transition: 0.25s;
 }
 
-
 .match-default,
 .link-default {
   display: block;
 }
+
 .match-hover,
 .match-active,
 .link-hover,
@@ -206,26 +231,25 @@ body {
   display: none;
 }
 
-
 .icon-group:hover .match-default,
 .icon-group:hover .link-default {
   display: none;
 }
+
 .icon-group:hover .match-hover,
 .icon-group:hover .link-hover {
   display: block;
 }
 
-
 .icon-group:active .match-hover,
 .icon-group:active .link-hover {
   display: none;
 }
+
 .icon-group:active .match-active,
 .icon-group:active .link-active {
   display: block;
 }
-
 
 .tshirt-img {
   width: 100%;
@@ -302,7 +326,6 @@ body {
   font-family: "Milligram Light";
 }
 
-
 .filter-row {
   margin-top: 180px;
   margin-bottom: 20px;
@@ -359,6 +382,7 @@ body {
   display: none;
   position: absolute;
   top: 110%;
+  z-index: 1;
 }
 
 .filter-menu li {
